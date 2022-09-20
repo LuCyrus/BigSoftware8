@@ -4,7 +4,7 @@
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="../img/head.png" background-size="cover"></image>
     <view class="userinfo-text"> 
-      <text class="userinfo-nickname">失散多年的哥哥</text>
+      <text class="userinfo-nickname">user</text>
       <view class="likeCount">收藏数量</view>
     </view> 
   </view>

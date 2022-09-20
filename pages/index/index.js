@@ -34,40 +34,10 @@ Page({
     },
     todayListArr:[
       {
-        imgUrl:'../img/001.jpeg',
-        text:'西红柿牛腩',
-        id:1
-      }, 
-      {
-        imgUrl: '../img/002.jpeg',
-        text: '香煎辣排骨',
-        id: 1
-      },
-      {
-        imgUrl: '../img/003.jpeg',
-        text: '菠萝肉松饭',
-        id: 1
-      }, 
-      {
         imgUrl: '../img/004.jpeg',
         text: '麻辣小龙虾',
         id: 1
       },
-      {
-        imgUrl: '../img/005.jpeg',
-        text: '水晶葡萄',
-        id: 1
-      },
-      {
-        imgUrl: '../img/006.jpeg',
-        text: '意大利披萨',
-        id: 1
-      },
-      {
-        imgUrl: '../img/1.jpeg',
-        text: '番茄炒蛋',
-        id: 1
-      }
     ],
     isLoading:false,//正在加载中
     noMore:true//是否还有更多数据

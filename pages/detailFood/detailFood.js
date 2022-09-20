@@ -7,18 +7,18 @@ Page({
   data: {
     detail:{
         id:1,
-        imgUrl:'../img/food.png',
-        title:'香煎辣排骨',
-        author:'小芊',
+        imgUrl:'../img/004.jpeg',
+        title:'麻辣小龙虾',
+        author:'user',
         save:888,
         like:959,
-        foodText:'排骨绝对是人见人爱的美味佳肴，丰富的蛋白质、维生素以及骨胶原深受到女性的青睐，不管是红烧，糖醋还是清炒，味道都很赞。',
-        foodGrade:'一般',
+        foodText:'味道很赞。',
+        foodGrade:'好',
         foodTime:'60分钟',
         materialListArr: [
             {
-             name:'辣花生',
-             count:50
+             name:'小龙虾',
+             count:30
             },
             {
                 name: '盐',
@@ -33,39 +33,22 @@ Page({
                 count: 50
             },
             {
-                name: '排骨',
-                count: 50
+                name: '辣椒',
+                count: 5
             },
-            {
-                name: '黑胡椒',
-                count: 50
-            },
+            
             {
                 name: '姜蒜',
                 count: 50
             },
         ],
         wayListArr:[
-            '排骨切段，放入锅中焯水撇去浮沫',
-            '排骨切段，放入锅中焯水撇去浮沫',
-            '排骨切段，放入锅中焯水撇去浮沫',
-            '排骨切段，放入锅中焯水撇去浮沫',
-            '排骨切段，放入锅中焯水撇去浮沫',
-            '排骨切段，放入锅中焯水撇去浮沫',
-            '排骨切段，放入锅中焯水撇去浮沫',
-            '排骨切段，放入锅中焯水撇去浮沫'
+            '小龙虾加辣椒'
         ],
         picListArr: [
-            '../img/food.png',
-            '../img/food.png',
-            '../img/food.png',
-            '../img/food.png',
-            '../img/food.png',
-            '../img/food.png',
-            '../img/food.png',
-            '../img/food.png'
+            '../img/004.jpeg',
         ],
-        tipContent:'家就安静安静假假按揭啊家就安静安静假假按揭啊家就安静安静假假按揭啊家就安静安静假假按揭啊家就安静安静假假按揭啊'
+        tipContent:'小龙虾小龙虾小龙虾小龙虾'
     },
     addLike:{
         add:false,
