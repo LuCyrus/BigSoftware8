@@ -1,42 +1,37 @@
-<!--index.wxml-->
-<view  class="container" >
-  <view class="section">
-   <navigator url="/pages/searchList/searchList" hover-class="navigator-hover">
-    <view class="search" >搜索从这里开始</view>
-    <image src="../img/search.png"/>
-    </navigator>
-  </view>
-  <!-- 轮播图片 -->
-  <view class="swiper-box">
-    <swiper indicator-dots="{{swiper.indicatorDots}}" indicator-color="{{swiper.indicatorColor}}" indicator-active-color="{{swiper.indicatorActiveColor}}"
-  autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" circular="{{swiper.s}}">
-      <block wx:for="{{swiper.imgUrls}}">
-        <swiper-item>
-            <navigator  data-id="{{item.id}}" url="/pages/detailFood/detailFood?id={{item.id}}" hover-class="navigator-hover">
-                <image src="{{item.name}}" class="slide-image" mode="apsectFit"/>
-           </navigator>
-        </swiper-item>
-        
-      </block>
-    </swiper>
-  </view>
-  <!-- 今日推荐 -->
-  <view class="todayNew">
-    <view class="todayTitle">
-      今日推荐
+<!-- 搜索 -->
+<view class="search-wrap" bindtap="toSearch">
+    <view class="search-box">
+        <input type="text" placeholder="请输入食材关键词" class="input-cell" />
+        <image class="search-img" src="/images/search.png"></image>
     </view>
-    <view class="todayList " >
-       <navigator class="todayItem " wx:for="{{todayListArr}}" data-id="{{item.id}}" url="/pages/detailFood/detailFood?id={{item.id}}" hover-class="navigator-hover">
-            <image src="{{item.imgUrl}}"/>
-            <text>{{item.text}}</text>
-        </navigator>
-    </view>
-   
-  </view>
-  <!-- 上拉加载更多 -->
-  <view hidden="{{noMore}}">
-    <view class="loadMore" hidden="{{isLoading}}">上拉加载更多</view>
-    <view class="loadMore" hidden="{{!isLoading}}">加载中...</view>
-  </view>
-  <view class="loadMore" hidden="{{!noMore}}">没有更多数据</view>
 </view>
+<view class="type-box">
+    <view class="{{flag==1?'type-text-red':'type-text'}}" bindtap="textRed">食谱图文</view>
+    <view class="{{flag==0?'type-video-red':'type-video'}}" bindtap="videoRed">食谱视频</view>
+</view>
+<view class="food-box" wx:if="{{flag==1}}">
+    <block wx:for="{{recipesList}}">
+        <view wx:if="{{item.status==2}}" bindtap="toFoodDetail" data-id="{{item._id}}">
+            <image src="{{item.cover}}" class="food-cover"></image>
+
+            <view class="food-title">{{item.title}}</view>
+            <!-- <view class="{{item.collection==false?'collection1':'collection1-yes'}}" catchtap="collection1" data-id="{{item._id}}" data-collection="{{item.collection}}" data-index="{{index}}" >{{item.collection==false?'收藏':'已收藏'}}</view> -->
+
+
+
+        </view>
+    </block>
+</view>
+<view class="food-box" wx:if="{{flag==0}}">
+    <block wx:for="{{videoList}}">
+        <view wx:if="{{item.status==2}}">
+            <video src="{{item.video}}" class="food-cover"></video>
+
+            <view class="food-title">{{item.title}}</view>
+            <!-- <view class="{{item.collection==false?'collection2':'collection2-yes'}}" catchtap="collection2" data-id="{{item._id}}" data-collection="{{item.collection}}" data-index="{{index}}" >{{item.collection==false?'收藏':'已收藏'}}</view> -->
+        </view>
+    </block>
+</view>
+
+
+<view style="height: 100rpx;"></view>

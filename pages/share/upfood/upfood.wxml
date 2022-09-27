@@ -1,0 +1,394 @@
+<form bindsubmit="saveData">
+    <view class="img-wrap">
+
+        <view class="one-img" wx:if="{{cloudImg!=null}}">
+            <image src="{{cloudImg}}" class="img-choose"></image>
+            <image src="/images/close.png" class="close-img" bindtap="deleteImg"></image>
+
+        </view>
+
+        <view class="one-img" bindtap="chooseImage" wx:if="{{cloudImg==null}}">
+            <view>
+                <view class="add-text">添加菜品成品图</view>
+                <image src="/images/add2.png" class="img-choose"></image>
+
+            </view>
+        </view>
+
+    </view>
+    <view class="picker-box">
+        <view class="pciker-title">
+            菜式:
+        </view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{dishes}}">
+            <view class="picker">
+                {{dishes[index]==null?'请选择菜式∨':'当前选择的菜式：'+dishes[index]}}
+            </view>
+        </picker>
+
+    </view>
+
+    <view class="picker-box">
+        <view class="pciker-title">
+            特殊场合:
+        </view>
+        <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{occasion}}">
+            <view class="picker">
+                {{occasion[index1]==null?'请选择特殊场合∨':'当前选择的特殊场合：'+occasion[index1]}}
+            </view>
+        </picker>
+
+    </view>
+    <view class="picker-box">
+        <view class="pciker-title">
+            功效:
+        </view>
+        <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{effect}}">
+            <view class="picker">
+                {{effect[index2]==null?'请选择功效∨':'当前选择的功效：'+effect[index2]}}
+            </view>
+        </picker>
+
+    </view>
+
+    <view class="picker-box">
+        <view class="pciker-title">
+            人群:
+        </view>
+        <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{crowd}}">
+            <view class="picker">
+                {{crowd[index3]==null?'请选择人群∨':'当前选择的人群：'+crowd[index3]}}
+            </view>
+        </picker>
+
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="菜谱名称" class="input-cell" maxlength="20" name="title" />
+
+        </view>
+    </view>
+    <view style="height: 50rpx;"></view>
+    <view class="food-title">食材清单(至少填写一项)</view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材1" class="input-cell" maxlength="10" bindinput="getText" name="ingredients1" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材2" class="input-cell" maxlength="10" bindinput="getText" name="ingredients2" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材3" class="input-cell" maxlength="10" name="ingredients3" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材4" class="input-cell" maxlength="10" name="ingredients4" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材5" class="input-cell" maxlength="10" name="ingredients5" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材6" class="input-cell" maxlength="10" name="ingredients6" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材7" class="input-cell" maxlength="10" name="ingredients7" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材8" class="input-cell" maxlength="10" name="ingredients8" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材9" class="input-cell" maxlength="10" name="ingredients9" />
+
+        </view>
+    </view>
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="食材10" class="input-cell" maxlength="10" name="ingredients10" />
+        </view>
+    </view>
+    <view style="height: 50rpx;"></view>
+    <view class="food-title">步骤(至少填写一项)</view>
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step1!=null}}">
+            <image src="{{cloudImg_step1}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step1"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step1" wx:if="{{cloudImg_step1==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤一" class="textarea-cell-step" name="step1"></textarea>
+        </view>
+
+
+    </view>
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step2!=null}}">
+            <image src="{{cloudImg_step2}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step2"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step2" wx:if="{{cloudImg_step2==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤二" class="textarea-cell-step" name="step2"></textarea>
+        </view>
+
+
+    </view>
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step3!=null}}">
+            <image src="{{cloudImg_step3}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step3"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step3" wx:if="{{cloudImg_step3==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤三" class="textarea-cell-step" name="step3"></textarea>
+        </view>
+
+
+    </view>
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step4!=null}}">
+            <image src="{{cloudImg_step4}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step4"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step4" wx:if="{{cloudImg_step4==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤四" class="textarea-cell-step" name="step4"></textarea>
+        </view>
+
+
+    </view>
+
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step5!=null}}">
+            <image src="{{cloudImg_step5}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step5"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step5" wx:if="{{cloudImg_step5==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤五" class="textarea-cell-step" name="step5"></textarea>
+        </view>
+
+
+    </view>
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step6!=null}}">
+            <image src="{{cloudImg_step6}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step6"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step6" wx:if="{{cloudImg_step6==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤六" class="textarea-cell-step" name="step6"></textarea>
+        </view>
+
+
+    </view>
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step7!=null}}">
+            <image src="{{cloudImg_step7}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step7"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step7" wx:if="{{cloudImg_step7==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤七" class="textarea-cell-step" name="step7"></textarea>
+        </view>
+
+
+    </view>
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step8!=null}}">
+            <image src="{{cloudImg_step8}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step8"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step8" wx:if="{{cloudImg_step8==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤八" class="textarea-cell-step" name="step8"></textarea>
+        </view>
+
+
+    </view>
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step9!=null}}">
+            <image src="{{cloudImg_step9}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step9"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step9" wx:if="{{cloudImg_step9==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤九" class="textarea-cell-step" name="step9"></textarea>
+        </view>
+
+
+    </view>
+
+
+
+    <view class="img-wrap-step">
+
+        <view class="one-img-step" wx:if="{{cloudImg_step10!=null}}">
+            <image src="{{cloudImg_step10}}" class="img-choose-step"></image>
+            <image src="/images/close.png" class="close-img-step" bindtap="deleteImg_step10"></image>
+
+        </view>
+
+        <view class="one-img-step" bindtap="chooseImage_step10" wx:if="{{cloudImg_step10==null}}">
+            <view>
+                <view class="add-text-step">添加步骤图</view>
+
+                <image src="/images/add2.png" class="img-choose-step"></image>
+
+            </view>
+
+        </view>
+
+        <view class="textarea-wrap-step">
+            <textarea placeholder="请输入步骤十" class="textarea-cell-step" name="step10"></textarea>
+        </view>
+    </view>
+    <view class="food-title">详情:</view>
+    <view class="textarea-wrap">
+        <textarea placeholder="请输入菜品详情" class="textarea-cell" name="note" maxlength="-1"></textarea>
+    </view>
+
+
+
+
+
+
+
+
+
+
+    <view style="height: 50rpx;"></view>
+    <button type="primary" class="button-cell" form-type="submit">发布</button>
+    <view style="height: 120rpx;"></view>
+
+</form>

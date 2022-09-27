@@ -1,0 +1,157 @@
+.img-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20rpx 30rpx;
+    
+}
+
+.img-choose {
+    width: 700rpx;
+    height: 700rpx;
+}
+
+.close-img {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    right: 4rpx;
+    top: 4rpx;
+}
+
+.one-img {
+    margin: 4rpx 8rpx;
+}
+
+.add-text {
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    position: absolute;
+    right: 250rpx;
+    top: 600rpx;
+}
+
+.search-wrap {
+    padding: 0 50rpx 20rpx 50rpx;
+}
+
+.search-box {
+    padding: 0 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1rpx solid #e6e6e6;
+}
+
+.input-cell {
+    padding: 20rpx 20rpx;
+    background-color: white;
+    width: 600rpx;
+}
+.food-title{
+    font-size: 42rpx;
+    font-weight: bold;
+    margin-bottom: 30rpx;
+}
+
+
+
+.upfood{
+    bottom: 0rpx;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    color: white;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.upfood-text{
+    padding: 25rpx 60rpx;
+    background-color: orange;
+}
+
+/* 步骤图片 */
+.img-wrap-step {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20rpx 30rpx;
+}
+
+.img-choose-step {
+    width: 280rpx;
+    height: 280rpx;
+}
+
+.close-img-step {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    right: 4rpx;
+    top: 4rpx;
+}
+
+.one-img-step {
+    margin: 4rpx 8rpx;
+    position: relative;
+
+}
+.add-text-step {
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    position: absolute;
+    right: 60rpx;
+    top: 200rpx;
+}
+.textarea-cell-step{
+   
+    width: 330rpx;
+   
+    padding: 20rpx 20rpx;
+}
+.textarea-wrap-step{
+    margin: 0rpx 0rpx;
+    border: solid 1rpx #aaa;
+    border-radius: 20rpx;
+}
+.textarea-cell{
+   
+    width: 100%;
+   
+    padding: 20rpx 20rpx;
+}
+.textarea-wrap{
+    margin: 20rpx 20rpx;
+    border: solid 1rpx #aaa;
+    border-radius: 20rpx;
+}
+
+
+
+
+
+
+
+
+.picker-box{
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx 20rpx;
+    align-items: center;
+}
+.picker-box{
+   
+    font-weight: 550;
+    font-size: 38rpx;
+    margin-right: 20rpx;
+}
+.picker{
+    border: 1rpx solid grey;
+    padding: 10rpx;
+    margin-left: 20rpx;
+    font-size: small;
+    font-weight: 400;
+}

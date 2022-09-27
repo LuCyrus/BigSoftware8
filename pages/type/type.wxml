@@ -1,0 +1,15 @@
+<view class="type-box">
+    <scroll-view scroll-y="true" class="type-left">
+        <block wx:for="{{typeList}}">
+            <view bindtap="getTypeDetailList"  data-index="{{index}}" class="{{currentType==index?'choose-type':''}}">{{item}}</view>
+        </block>
+    </scroll-view>
+    <scroll-view scroll-y="true" class="type-right">
+        <block wx:for="{{detailList}}">
+           <view class="detail" bindtap="toDishDetail" data-index="{{index}}">{{item}}</view>
+        </block>
+    </scroll-view>
+</view>
+<view>
+  
+</view>

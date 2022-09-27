@@ -1,0 +1,89 @@
+/* 搜索框 */
+.search-wrap {
+    padding: 0 20rpx 20rpx 20rpx;
+    background-color: #FF6146;
+  }
+  
+  .search-box {
+    padding: 0 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1rpx solid #e6e6e6;
+    background-color: #FFF;
+  }
+  
+  .input-cell {
+    padding: 20rpx 20rpx;
+    background-color: white;
+    width: 600rpx;
+  }
+  
+  .search-img {
+    height: 50rpx;
+    width: 50rpx;
+    background-color: white;
+  }
+  /* 分类 */
+  .type-box{
+     display:flex;
+     flex-direction: row;
+     text-align: center;
+     justify-content: center;
+     margin-top: 20rpx;
+  }
+  .type-text{
+     padding: 20rpx 10rpx;
+     background-color: rgb(245, 245, 245);
+     width: 200rpx;
+    }
+  .type-video{
+    width: 200rpx;
+    padding: 20rpx 20rpx;
+    background-color: rgb(245, 245, 245);
+ }
+ .type-text-red{
+  padding: 20rpx 10rpx;
+  background-color: #FBC966;
+  width: 200rpx;
+ }
+ .type-video-red{
+  width: 200rpx;
+  padding: 20rpx 20rpx;
+  background-color: #FBC966;
+}
+
+
+
+
+  /* 菜谱 */
+  .food-box{
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx 20rpx;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .food-cover{
+    width: 345rpx;
+    height: 400rpx;
+    border-radius: 20rpx;
+  }
+  .food-title{
+    font-size: 36rpx;
+    margin: 10rpx 10rpx;
+  
+    /* 处理文字超出范围，限制文字显示 */
+    width: 330rpx;
+    height: 100rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+  }
+  
+
+
+
+  

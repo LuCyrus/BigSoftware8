@@ -1,5 +1,0 @@
-/* pages/addFood/addFood.wxss */
-.foodBox{
-    width:100%;
-    border-bottom: 1px solid #ddd;
-}

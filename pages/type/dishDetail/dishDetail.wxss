@@ -1,0 +1,52 @@
+
+
+
+
+
+  /* 菜谱 */
+  .food-box{
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx 20rpx;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .food-cover{
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 20rpx;
+  }
+  .food-title{
+    font-size: 36rpx;
+    margin: 50rpx 50rpx;
+    font-weight: bold;
+    
+  
+    /* 处理文字超出范围，限制文字显示 */
+    width: 330rpx;
+    height: 100rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+  }
+  .image-title{
+      display: flex;
+      flex-direction: row;
+  }
+  .food-box-in{
+      margin-bottom: 20rpx;
+  }
+  .title{
+      text-align: center;
+      font-size: 42rpx;
+      font-weight: bold;
+      color: #FBC966;
+      margin-bottom: 50rpx;
+  }
+
+
+
+
+
+  

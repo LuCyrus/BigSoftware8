@@ -1,0 +1,123 @@
+/* pages/wode/addGood/addGood.wxss */
+.box-wrap{
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx 20rpx;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-cell{
+   
+    font-weight: 550;
+    font-size: 38rpx;
+    margin-right: 20rpx;
+}
+.input-cell{
+    border: solid 1rpx #aaa;
+    border-radius: 20rpx;
+    width: 580rpx;
+    padding: 10rpx 10rpx;
+}
+.textarea-cell{
+   
+    width: 100%;
+   
+    padding: 20rpx 20rpx;
+}
+.textarea-wrap{
+    margin: 20rpx 20rpx;
+    border: solid 1rpx #aaa;
+    border-radius: 20rpx;
+}
+.detail-title{
+    font-weight: 550;
+    font-size: 38rpx;
+    margin-left: 20rpx;
+}
+.button-cell{
+    margin-right: 20rpx;
+}
+.choose-text
+{
+
+   margin: 20rpx 20rpx;
+   font-size: 36rpx;
+   color: blue;
+   font-weight: 550;
+}
+.img-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20rpx 30rpx;
+}
+
+.img-choose-big {
+    width: 700rpx;
+    height: 700rpx;
+}
+
+.close-img-big {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    right: 4rpx;
+    top: 4rpx;
+}
+
+.one-img-big {
+    margin: 4rpx 8rpx;
+}
+.add-text {
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    position: absolute;
+    right: 250rpx;
+    top: 600rpx;
+}
+.picker-box{
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx 20rpx;
+    align-items: center;
+}
+.picker-box{
+   
+    font-weight: 550;
+    font-size: 38rpx;
+    margin-right: 20rpx;
+}
+.picker{
+    border: 1rpx solid grey;
+    padding: 10rpx;
+    margin-left: 30rpx;
+    font-size: small;
+    font-weight: 400;
+}
+
+
+.img-choose {
+    width: 210rpx;
+    height: 210rpx;
+
+}
+
+.close-img {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: 4rpx;
+    top: 4rpx;
+}
+
+.one-img {
+    position: relative;
+    margin: 4rpx 8rpx;
+}
+.img-detail-box{
+     
+    font-weight: 550;
+    font-size: 38rpx;
+    margin-left: 20rpx;
+}

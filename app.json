@@ -1,49 +1,68 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs",
-        "pages/select/select",
-        "pages/user/user",
-        "pages/detailFood/detailFood",
-        "pages/searchList/searchList",
-        "pages/addFood/addFood"
+        "pages/type/type",
+        "pages/share/share",
+        "pages/comm/comm",
+        "pages/me/me",
+        "pages/customerService/customerService",
+        "pages/share/upfood/upfood",
+        "pages/publish/publish",
+        "pages/detail/detail",
+        "pages/index/search/search",
+        "pages/foodDetail/foodDetail",
+        "pages/share/upVideo/upVideo",
+        "pages/auth/auth",
+        "pages/me/collection/collection",
+        "pages/me/attention/attention",
+        "pages/me/fans/fans",
+        "pages/me/personalPage/personalPage",
+        "pages/me/message/message",
+        "pages/type/dishDetail/dishDetail"
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#F3EBDF",
-        "navigationBarTitleText": "今日美食",
-        "navigationBarTextStyle": "black"
+        "navigationBarBackgroundColor": "#FBC966",
+        "navigationBarTitleText": "食谱推荐",
+        "navigationBarTextStyle": "white"
     },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
     "tabBar": {
-        "color": "#ffffff",
-        "selectedColor": "#A37011",
+        "color": "#000",
+        "selectedColor": "#FBC966",
         "borderStyle": "white",
-        "backgroundColor": "#FFCC66",
         "list": [
             {
-                "selectedIconPath": "pages/img/cai02.png",
-                "iconPath": "pages/img/cai01.png",
                 "pagePath": "pages/index/index",
-                "text": "首页"
+                "text": "首页",
+                "iconPath": "/images/home.png",
+                "selectedIconPath": "/images/home_yes.png"
             },
             {
-                "selectedIconPath": "pages/img/guo02.png",
-                "iconPath": "pages/img/guo01.png",
-                "pagePath": "pages/select/select",
-                "text": "分类"
+                "pagePath": "pages/type/type",
+                "text": "分类",
+                "iconPath": "/images/type.png",
+                "selectedIconPath": "/images/type_yes.png"
             },
             {
-                "selectedIconPath": "pages/img/save02.png",
-                "iconPath": "pages/img/save01.png",
-                "pagePath": "pages/user/user",
-                "text": "收藏"
+                "pagePath": "pages/share/share",
+                "text": "分享",
+                "iconPath": "/images/share.png",
+                "selectedIconPath": "/images/share_yes.png"
+            },
+            {
+                "pagePath": "pages/comm/comm",
+                "text": "交流",
+                "iconPath": "/images/comm.png",
+                "selectedIconPath": "/images/comm_yes.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我的",
+                "iconPath": "/images/me.png",
+                "selectedIconPath": "/images/me_yes.png"
             }
         ]
-    },
-    "networkTimeout": {
-        "request": 10000,
-        "downloadFile": 10000
-    },
-    "debug": true,
-    "sitemapLocation": "sitemap.json"
+    }
 }

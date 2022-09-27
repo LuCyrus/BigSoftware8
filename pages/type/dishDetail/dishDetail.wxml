@@ -1,0 +1,12 @@
+<!-- <view class="title" >{{allList[currentType][index]}}</view> -->
+<view class="food-box">
+    <block wx:for="{{recipesList}}">
+        <view wx:if="{{item.status==2}}" bindtap="toFoodDetail" data-id="{{item._id}}" class="food-box-in">
+            <view class="image-title">
+                <image src="{{item.cover}}" class="food-cover"></image>
+
+                <view class="food-title">{{item.title}}</view>
+            </view>
+        </view>
+    </block>
+</view>

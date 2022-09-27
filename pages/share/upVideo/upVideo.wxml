@@ -1,0 +1,27 @@
+<form bindsubmit="saveData">
+    <view class="search-wrap">
+        <view class="search-box">
+            <input type="text" placeholder="请输入标题" class="input-cell" maxlength="20" name="title" />
+
+        </view>
+    </view>
+    <view class="img-wrap">
+
+        <view class="one-img" wx:if="{{videoUrl!=null}}">
+            <video src="{{videoUrl}}" class="img-choose" autoplay="false"></video>
+          
+
+        </view>
+
+        <view class="one-img" bindtap="chooseVideo" wx:if="{{videoUrl==null}}">
+            <view>
+                <view class="add-text">请选择视频</view>
+                <image src="/images/add2.png" class="img-choose"></image>
+
+            </view>
+        </view>
+
+    </view>
+    <view style="height: 120rpx;"></view>
+    <button type="primary" class="button-cell" form-type="submit">上传</button>
+</form>

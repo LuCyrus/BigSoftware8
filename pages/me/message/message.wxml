@@ -1,0 +1,40 @@
+<form bindsubmit="saveData">
+ 
+    <view class="box-wrap">
+        <view class="title-cell">
+            名称:
+        </view>
+        <input placeholder="请输入名称" class="input-cell" name="name" value="{{user.name}}"></input>
+
+    </view>
+    
+
+  
+    <view class="picker-box">
+        <view class="pciker-title">
+            性别:
+        </view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{sex}}">
+            <view class="picker">
+                {{sex[index]==null?'请选择性别∨':'当前选择的性别：'+sex[index]}}
+            </view>
+        </picker>
+
+    </view>
+    <view class="box-wrap">
+        <view class="title-cell">
+            生日:
+        </view>
+        <input placeholder="请输入生日" class="input-cell" name="birthday" value="{{user.birthday}}"></input>
+        
+    </view>
+    <view class="detail-title">备注:</view>
+    <view class="textarea-wrap">
+        <textarea placeholder="请输入备注" class="textarea-cell" name="text" value="{{user.text}}"></textarea>
+    </view>
+
+
+    <button type="primary" class="button-cell" form-type="submit">提交信息</button>
+
+
+</form>

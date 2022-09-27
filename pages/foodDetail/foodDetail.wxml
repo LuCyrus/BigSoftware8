@@ -1,0 +1,27 @@
+<image src="{{food.cover}}" class="food-cover"></image>
+
+
+<view class="food-title">{{food.title}}</view>
+
+<view class="food-detail-title">食材明细</view>
+<view class="ingredients"><text class="ingredients-color">{{food.ingredientsList}}</text></view>
+
+<view class="food-detail-title">食谱详情</view>
+<view class="food-detail-box">
+    <view class="food-text">{{food.note}}</view>
+</view>
+
+<view class="food-detail-title">做法步骤</view>
+<block wx:for="{{food.step_text}}">
+  <view class="step-box">
+    <view class="step-text">步骤{{index+1}}：{{item}}</view>
+    <image src="{{food.step_img[index]}}" class="food-step-img"></image>
+  </view>
+</block>
+
+<view class="collectionAndShare">
+  <view class="{{collection==false?'collection':'collection-yes'}}" bindtap="collection" >{{collection==false?'收藏':'已收藏'}}</view>
+ 
+</view>
+
+<view style="height: 120rpx;"></view>

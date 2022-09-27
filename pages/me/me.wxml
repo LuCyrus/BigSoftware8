@@ -1,0 +1,13 @@
+<view wx:if="{{userInfo!=null}}" class="face-wrap">
+    <image src="{{userInfo.avatarUrl}}" class="face-img"></image>
+</view>
+<view wx:if="{{userInfo!=null}}" class="nickname">{{userInfo.nickName}}</view>
+<view class="up-good" wx:if="{{userInfo!=null}}" bindtap="toMessage">个人信息</view>
+<button wx:if="{{userInfo==null}}" bindtap="getUserProfile" class="load">登录</button>
+<!-- <view class="up-good" wx:if="{{userInfo!=null}}" bindtap="toShare">查看发布内容</view> -->
+<view class="up-good" wx:if="{{userInfo!=null}}" bindtap="toCollection">我的收藏</view>
+<view class="up-good" wx:if="{{userInfo!=null}}" bindtap="toAttention">我的关注</view>
+<view class="up-good" wx:if="{{userInfo!=null}}" bindtap="toFans">我的粉丝</view>
+<view class="up-good" wx:if="{{userInfo!=null}}" bindtap="toMyWorks">我的动态</view>
+<view class="up-good" wx:if="{{userInfo!=null}}" bindtap="toService">客服</view>
+<view class="up-good" wx:if="{{userInfo!=null}}" bindtap="logOff">退出登录</view>

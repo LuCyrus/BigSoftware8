@@ -1,0 +1,31 @@
+
+<view class="type-box">
+    <!-- <view class="{{flag==1?'type-text-red':'type-text'}}" bindtap="textRed">食谱图文</view> -->
+    <!-- <view class="{{flag==0?'type-video-red':'type-video'}}" bindtap="videoRed">食谱视频</view> -->
+</view>
+<view class="food-box" wx:if="{{flag==1}}">
+    <block wx:for="{{recipesList}}">
+        <view wx:if="{{item.status==2}}" bindtap="toFoodDetail" data-id="{{item._id}}">
+            <image src="{{item.cover}}" class="food-cover"></image>
+
+            <view class="food-title">{{item.title}}</view>
+            
+
+
+
+        </view>
+    </block>
+</view>
+<view class="food-box" wx:if="{{flag==0}}">
+    <block wx:for="{{videoList}}">
+        <view wx:if="{{item.status==2}}">
+            <video src="{{item.video}}" class="food-cover"></video>
+
+            <view class="food-title">{{item.title}}</view>
+          
+        </view>
+    </block>
+</view>
+
+
+<view style="height: 100rpx;"></view>

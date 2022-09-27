@@ -1,0 +1,159 @@
+.food-cover{
+  width: 100%;
+  height: 600rpx;
+  /* margin-top: 50rpx; */
+}
+.food-price-tag{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 10rpx;
+}
+.food-price{
+  font-size: 50rpx;
+  color: #FBC966;
+}
+.food-tag{
+  
+  color: rgb(211, 211,211)
+}
+
+.food-title{
+ font-size: 40rpx;
+ justify-content: space-between;
+ align-items: center;
+ text-align: center;
+ margin-top: 30rpx;
+ border-bottom: 6rpx #eeeeee solid;
+padding-bottom: 40rpx;
+}
+.share-but{
+ background-color: white;
+ padding: 0 0;
+ margin: 0 0;
+}
+.food-detail-title{
+  padding: 20rpx 20rpx;
+  border-top: 4rpx solid #f7f7f7;
+  font-weight: bold;
+  font-size: 40rpx;
+  margin-top: 0rpx;
+}
+.food-text{
+  padding: 0 20rpx;
+}
+.food-detail-img{
+  width: 100%;
+}
+.food-detail-box{
+margin: 0 20rpx 50rpx 20rpx;
+font-size: 32rpx;
+}
+
+/* 底部tabber */
+.tabber{
+  position: fixed;
+  height: 100rpx;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  border-top: 1rpx solid #7e6969;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+}
+.cart-img{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 0 0 20rpx;
+
+}
+.tabber-right{
+  display: flex;
+  flex-direction: row;   
+}
+.add-cart{
+  height: 100rpx;
+  align-items: center;
+  line-height: 100rpx;
+  background-color: orange;
+  padding: 0 40rpx;
+  color: white;
+}
+
+.buy{
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #FBC966;
+  padding: 0 40rpx;
+  color: white;
+}
+.cart-num{
+  position:absolute;
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #FBC966;
+  color: white;
+  font-size: 26rpx;
+  left: 70rpx;
+  top:0;
+  text-align: center;
+}
+.ingredients{
+  margin: 40rpx 20rpx 50rpx 20rpx;
+  font-size: 42rpx;
+
+
+}
+.ingredients-color{
+  color: blue;
+}
+.food-step-img{
+  width: 100%;
+  height: 600rpx;
+}
+.step-text{
+  margin: 20rpx 20rpx;
+  font-size: 36rpx;
+}
+.step-box{
+  border: 6rpx #eeeeee solid;
+
+}
+
+.collectionAndShare {
+  position: fixed;
+  height: 110rpx;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collection {
+  text-align: center;
+  align-items: center;
+  line-height: 110rpx;
+  height: 110rpx;
+  padding: 0rpx 40rpx;
+  background-color: #FBC966;
+  width: 100%;
+  color: white;
+
+}
+.collection-yes{
+  text-align: center;
+  align-items: center;
+  line-height: 110rpx;
+  height: 110rpx;
+  padding: 0rpx 40rpx;
+  background-color: rgb(255, 176, 176);
+  width: 100%;
+  color: white;
+
+}

@@ -1,0 +1,51 @@
+.img-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20rpx 30rpx;
+}
+
+.img-choose {
+    width: 700rpx;
+    height: 700rpx;
+}
+
+.close-img {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    right: 4rpx;
+    top: 4rpx;
+}
+
+.one-img {
+    margin: 4rpx 8rpx;
+}
+
+.add-text {
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    position: absolute;
+    right: 280rpx;
+    top: 700rpx;
+}
+.search-wrap {
+    padding: 0 50rpx 20rpx 50rpx;
+    margin-top: 50rpx;
+}
+
+.search-box {
+    padding: 0 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1rpx solid #e6e6e6;
+}
+
+.input-cell {
+    padding: 20rpx 20rpx;
+    background-color: white;
+    width: 600rpx;
+}

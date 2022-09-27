@@ -1,0 +1,6 @@
+<block wx:for="{{userList}}">
+    <view class="user-box" bindtap="toPersonalPage" data-attentionId="{{item.attentionId}}">
+        <image src="{{item.otherPortrait}}" class="otherPortrait"></image>
+        <view class="otherNickName">{{item.otherNickName}}</view>
+    </view>
+</block>

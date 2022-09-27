@@ -1,30 +1,32 @@
-//app.js
+// app.js
 App({
-  onLaunch: function () {
-    //调用API从本地缓存中获取数据
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+  onLaunch() {
+    wx.cloud.init({
+      env:"bigsoftware8-9g52gvfy99ed34a8"//修改成自己的环境名称
+    })
+    var that=this;
+    wx.cloud.callFunction({
+      name:'getUserOpenid',
+      success(res){
+        console.log(res.result.openid)
+        
+        that.globalData.openid=res.result.openid
+        
+      }
+    })
+    if(wx.getStorageSync('userInfo')){
+      this.globalData.userInfo=wx.getStorageSync('userInfo')
+   }
   },
-  getUserInfo:function(cb){
-    var that = this
-    if(this.globalData.userInfo){
-      typeof cb == "function" && cb(this.globalData.userInfo)
-    }else{
-      //调用登录接口
-      wx.login({
-        success: function () {
-          wx.getUserInfo({
-            success: function (res) {
-              that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
-            }
-          })
-        }
-      })
-    }
-  },
-  globalData:{
-    userInfo:null
+  globalData: {
+    userInfo: null,
+    openid:null,
+    index:0,
   }
 })
+
+
+//食谱推荐小程序
+//饮食美食推荐食谱
+//食谱菜谱小程序
+//健康食谱微信小程序

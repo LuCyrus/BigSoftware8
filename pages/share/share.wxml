@@ -1,0 +1,37 @@
+<view class="publish-video-box" bindtap="tochooseVideo">
+    <view class="publish-video">发布视频</view>
+</view>
+<view class="camera-box" bindtap="toAnnounce">
+    <view class="release">发布菜品</view>
+</view>
+<view style="height: 70rpx;"></view>
+
+
+<view class="myShare">我发布的菜谱：</view>
+<block wx:for="{{recipesList}}">
+    <view class="food-box" wx:if="{{myOpenid==item._openid}}" bindtap="toFoodDetail" data-id="{{item._id}}">
+        <image src="{{item.cover}}" class="food-img"></image>
+        <view class="right-box">
+            <view>{{item.title}}</view>
+            <view class="right-bottom-box">
+                <view class="tag" data-id="{{item._id}}" catchtap="deleteMyFood">删除</view>
+                <view class="price">当前状态：{{item.status==1?'待审核':item.status==-1?'审核未通过':item.status==2?'上架':'被下架'}}</view>
+            </view>
+        </view>
+    </view>
+</block>
+<view style="height: 70rpx;"></view>
+
+<view class="myShare">我发布的视频：</view>
+<block wx:for="{{videoList}}">
+    <view class="video-box" wx:if="{{myOpenid==item._openid}}">
+        <video src="{{item.video}}" class="video-img" ></video>
+        <view class="right-box">
+            <view>{{item.title}}</view>
+            <view class="right-bottom-box">
+                <view class="tag" data-id="{{item._id}}" catchtap="deleteMyVideo" >删除</view>
+                <view class="price">当前状态：{{item.status==1?'待审核':item.status==-1?'审核未通过':item.status==2?'上架':'被下架'}}</view>
+            </view>
+        </view>
+    </view>
+</block>
