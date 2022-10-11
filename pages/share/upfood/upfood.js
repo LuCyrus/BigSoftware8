@@ -19,12 +19,12 @@ Page({
        cloudImg_step9:null,
        cloudImg_step10:null,
        cloudImgStepList:[],
-       typeList:["菜式","特殊场合","功效","人群"],
+       typeList:["菜式","场合","功效","人群"],
        dishes:["家常菜","素菜","肉菜","懒人食谱","甜品饮料"],
        occasion:["正餐","宴客","野餐"],
-       effect:["减肥","美容","清热祛火"],
-       crowd:["宝宝食谱","老人","孕妇"],
-       allList:[["家常菜","素菜","肉菜","懒人食谱","甜品饮料"],["正餐","宴客","野餐"],["减肥","美容","清热祛火"],["宝宝食谱","老人","孕妇"]],
+       effect:["益气补血","健脾养胃","清热祛火","无"],
+       crowd:["婴幼儿","老人","孕妇","无"],
+       allList:[["家常菜","素菜","肉菜","懒人食谱","甜品饮料"],["正餐","宴客","野餐"],["益气补血","健脾养胃","清热祛火","无"],["婴幼儿","老人","孕妇","无"]],
     },
 
 
@@ -135,21 +135,21 @@ Page({
         }
         if(!that.data.index1){
             wx.showToast({
-                title: '请选择特殊场合',
+                title: '请选择场合',
                 icon:'none'
               })
             return
         }
         if(!that.data.index2){
             wx.showToast({
-                title: '请选择特殊功效',
+                title: '请选择功效',
                 icon:'none'
               })
             return
         }
         if(!that.data.index3){
             wx.showToast({
-                title: '请选择特殊人群',
+                title: '请选择人群',
                 icon:'none'
               })
             return

@@ -5,19 +5,9 @@
     <!-- <image class="search-img" src="/images/search.png" bindtap="toSearch"></image> -->
   </view>
 </view>
-<view class="search-wrap">
-  <view class="search-box">
-    <input type="text" placeholder="请输入食材关键词" class="input-cell" bindinput="getValue2" />
-    <!-- <image class="search-img" src="/images/search.png" bindtap="toSearch"></image> -->
-  </view>
-</view>
 
-<view class="search-wrap">
-  <view class="search-box">
-    <input type="text" placeholder="请输入食材关键词" class="input-cell" bindinput="getValue3" />
-    <!-- <image class="search-img" src="/images/search.png" bindtap="toSearch"></image> -->
-  </view>
-</view>
+
+
 <view class="search-text-box" >
   <view class="search-text" bindtap="toSearch">点击搜索</view>
 </view>

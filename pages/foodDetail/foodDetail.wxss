@@ -141,7 +141,7 @@ font-size: 32rpx;
   line-height: 110rpx;
   height: 110rpx;
   padding: 0rpx 40rpx;
-  background-color: #FBC966;
+  background-color: #ffae00;
   width: 100%;
   color: white;
 
@@ -152,7 +152,7 @@ font-size: 32rpx;
   line-height: 110rpx;
   height: 110rpx;
   padding: 0rpx 40rpx;
-  background-color: rgb(255, 176, 176);
+  background-color: #ffd685;
   width: 100%;
   color: white;
 

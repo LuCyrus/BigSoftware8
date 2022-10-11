@@ -30,11 +30,11 @@
 
     <view class="picker-box">
         <view class="pciker-title">
-            特殊场合:
+            场合:
         </view>
         <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{occasion}}">
             <view class="picker">
-                {{occasion[index1]==null?'请选择特殊场合∨':'当前选择的特殊场合：'+occasion[index1]}}
+                {{occasion[index1]==null?'请选择场合∨':'当前选择的场合：'+occasion[index1]}}
             </view>
         </picker>
 

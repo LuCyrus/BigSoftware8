@@ -45,7 +45,7 @@ Page({
       if(!this.data.inputValue1){
         wx.showToast({
           icon:"error",
-          title: '第一个搜索为空',
+          title: '搜索为空',
         })
         return
       }
