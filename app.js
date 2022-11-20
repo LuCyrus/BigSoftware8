@@ -2,7 +2,7 @@
 App({
   onLaunch() {
     wx.cloud.init({
-      env:"bigsoftware8-9g52gvfy99ed34a8"//修改成自己的环境名称
+      env:"bigsoftware8-9guxh8nibff8e55d"
     })
     var that=this;
     wx.cloud.callFunction({
